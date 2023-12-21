@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
+# the intermediate linear mask is fixed as 0x0000 0000 0000 0001 0000 0000 0000 0000
 from pycryptosat import Solver
 import time
 import os
@@ -222,11 +222,11 @@ def speck_twopart(Round1,k1,Round2,k2):
 
 Round1=5 #number of rounds for the first part
 print ("first part, number of rounds:  "+str(Round1))
-k1=12 #correlation of first part is higher than 2^-k1
+k1=12 #correlation of the first part is higher than 2^-k1
 print ("correlation: 2^-"+str(k1))
 Round2=12 #number of rounds for the second part
 print ("second part, number of rounds:  "+str(Round2))
-k2=48 #correlation of first part is higher than 2^-k2
+k2=48 #correlation of the second part is higher than 2^-k2
 print ("correlation: 2^-"+str(k2))
 
 
